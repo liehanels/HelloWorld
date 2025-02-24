@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edTfirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name."
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <EditText
+        android:id="@+id/edTlastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edTfirstName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="Enter your last name." />
+
+    <Button
+        android:id="@+id/btnGreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edTlastName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Greeting" />
+
+</RelativeLayout>
