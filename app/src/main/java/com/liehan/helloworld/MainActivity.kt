@@ -1,6 +1,8 @@
 package com.liehan.helloworld
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -8,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.io.Console
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,13 +27,16 @@ class MainActivity : AppCompatActivity() {
 
         val firstName = findViewById<EditText>(R.id.edTfirstName)
         val lastName = findViewById<EditText>(R.id.edTlastName)
+        val age = findViewById<EditText>(R.id.edTAge)
         val button = findViewById<Button>(R.id.btnGreet)
 
         button.setOnClickListener {
             val text1 = firstName.text.toString()
             val text2 = lastName.text.toString()
+
             val combinedText = "$text1 $text2"
             Toast.makeText(this, combinedText, Toast.LENGTH_LONG).show()
+            Log.i(TAG, "Hello $combinedText")
         }
     }
 }
