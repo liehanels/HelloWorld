@@ -27,15 +27,18 @@ class MainActivity : AppCompatActivity() {
 
         val firstName = findViewById<EditText>(R.id.edTfirstName)
         val lastName = findViewById<EditText>(R.id.edTlastName)
-        val age = findViewById<EditText>(R.id.edTAge)
+        val age = findViewById<EditText>(R.id.edTAge) //returns a string
         val button = findViewById<Button>(R.id.btnGreet)
 
         button.setOnClickListener {
-            val text1 = firstName.text.toString()
-            val text2 = lastName.text.toString()
+            var text1 = firstName.text.toString()
+            var text2 = lastName.text.toString()
+            var ageInt = Integer.parseInt(age.text.toString()) //from string to int
 
-            val combinedText = "$text1 $text2"
+            var combinedText = "$text1 $text2 is $ageInt years old"
+
             Toast.makeText(this, combinedText, Toast.LENGTH_LONG).show()
+
             Log.i(TAG, "Hello $combinedText")
         }
     }
