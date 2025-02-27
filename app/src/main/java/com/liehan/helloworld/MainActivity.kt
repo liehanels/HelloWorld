@@ -39,8 +39,9 @@ class MainActivity : AppCompatActivity() {
             var ageInt = Integer.parseInt(age.text.toString()) //from string to int
             var combinedText = "$text1 $text2 is $ageInt years old"
 
+            //Toast.makeText(where-to-show, what-to-show, how-long-to-show).show()
             Toast.makeText(this, combinedText, Toast.LENGTH_LONG).show()
-
+            //Write-to-log.type-of-message(TAG, message)
             Log.i(TAG, "Hello $combinedText")
         }
     } //end of the onCreate method
