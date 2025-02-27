@@ -21,13 +21,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         } //code starts here
-
         //elements declared here from the UI
         //val valueName = findViewById<Type of element>(R.id.elementName)
-
         val firstName = findViewById<EditText>(R.id.edTfirstName)
         val lastName = findViewById<EditText>(R.id.edTlastName)
-        val age = findViewById<EditText>(R.id.edTAge) //returns a string
+        val age = findViewById<EditText>(R.id.edTAge)
         val button = findViewById<Button>(R.id.btnGreet)
 
         //define the button click event (what happens if the button is clicked)
